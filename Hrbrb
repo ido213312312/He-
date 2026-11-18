@@ -1,0 +1,7 @@
+Reevaluate the Integration Testing architecture with one important requirement: Integration Tests must be independently selectable and executable, without depending on the full Golden Path E2E pipeline.
+
+The Golden Path validates a generic customer workflow, while Integration Tests must support isolated runtime testing of Toolchain components and interactions not covered by that workflow.
+
+Inspect the actual code and evaluate practical execution options for both AWS API tests and tests requiring the real Candidate Runner identity/VPC. Compare complexity, security, test authoring, debugging, and required code changes.
+
+Recommend the simplest reusable execution approach. Do not assume all Integration Tests should run inside Golden Path buildspecs, and avoid building unnecessary infrastructure.
